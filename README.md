@@ -1,2 +1,2 @@
 # EasyReportingTool
-Easy to build, Fast to deploy Web based reporting tool based on .NET 4
+Easy, Fast and Lightweight Web based report publishing tool based on .NET 4
