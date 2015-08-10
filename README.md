@@ -5,6 +5,6 @@ This product is still being uploaded. Please do not download. Thanks
 Easy, Fast and Lightweight Web based report publishing tool based on .NET 4
 
 # TODO
-Database creation script
-User Documentation 
-Installation notees
+[ ] Database creation script
+[ ] User Documentation 
+[ ] Installation notes
