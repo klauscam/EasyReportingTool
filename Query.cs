@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 
-namespace WebApplication10
+namespace EasyReportingTool
 {
     public class QueryResult
     {
@@ -14,14 +14,14 @@ namespace WebApplication10
             using (DataClasses1DataContext dc = new DataClasses1DataContext())
             {
                 var query = (from c in dc.Queries
-                             where c.Guid == guid
+                             where c.GUID == guid
                              select c).SingleOrDefault();
                 q = query;
             }
 
 
             string connectionString =
-           "Data Source=" + q.server + ";Initial Catalog=" + q.catalog + ";Persist Security Info=True;User ID="+q.user+";Password="+q.password;
+           "Data Source=" + q.server + ";Initial Catalog=" + q.catalog + ";Persist Security Info=True;User ID="+q.username+";Password="+q.password;
 
             string queryString = q.sql;
 

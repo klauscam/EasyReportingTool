@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication10 {
+namespace EasyReportingTool {
     
     
     public partial class addReport {

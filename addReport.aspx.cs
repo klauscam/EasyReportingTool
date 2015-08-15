@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication10
+namespace EasyReportingTool
 {
     public partial class addReport : System.Web.UI.Page
     {
@@ -13,6 +13,7 @@ namespace WebApplication10
         {
             try
             {
+                //TODO: check for all field validation
                 if (Request["sql"] != null)
                 {
 
@@ -20,14 +21,16 @@ namespace WebApplication10
                     using (DataClasses1DataContext dc = new DataClasses1DataContext())
                     {
                         Query q = new Query();
-                        q.Guid = guid;
+                        q.GUID = guid;
                         q.catalog = Request["catalog"];
                         q.createdby = User.Identity.Name;
                         q.createdon = DateTime.Now;
                         q.enabled = true;
                         q.server = Request["server"];
                         q.sql = Request["sql"];
-
+                        q.username = Request["username"];
+                        q.password = Request["password"];
+                        q.url = "/report.aspx?guid=" + Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(guid));
                         dc.Queries.InsertOnSubmit(q);
                         dc.SubmitChanges();
 
@@ -38,7 +41,7 @@ namespace WebApplication10
                     Response.Write(Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(guid)));
 
                 }
-            }catch{
+            }catch (Exception ex){
                 Response.Write("Trouble");
             }
         }

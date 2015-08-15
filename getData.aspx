@@ -1,1 +1,1 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="getData.aspx.cs" Inherits="WebApplication10.getData" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="getData.aspx.cs" Inherits="EasyReportingTool.getData" %>

@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebApplication10</RootNamespace>
-    <AssemblyName>WebApplication10</AssemblyName>
+    <RootNamespace>EasyReportingTool</RootNamespace>
+    <AssemblyName>EasyReportingTool</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
@@ -59,12 +59,10 @@
     <Content Include="js/backgrid.js" />
     <Content Include="css/backgrid.min.css" />
     <Content Include="js/backgrid.min.js" />
-    <Content Include="vbackgridfilter.css" />
     <Content Include="js/backgridfilter.js" />
     <Content Include="js/backgridpaginator.js" />
     <Content Include="getColumns.aspx" />
     <Content Include="getData.aspx" />
-    <Content Include="HTMLPage1.htm" />
     <Content Include="js/jquery1_11_3.js" />
     <Content Include="css/pagination.css" />
     <Content Include="publisher.aspx" />
