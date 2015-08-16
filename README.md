@@ -20,10 +20,8 @@ All data will be displayed in tabular format.
 
 
 # TODO
-[x] Database creation script<br/>
-[x] User Documentation<br/>
-[ ] Installation notes<br/>
-[ ] Add download to CSV<br/>
-[ ] Add API for automatic creation of reports<br/>
-[ ] Ability to display graphs<br/>
-[ ] Ability to display geographic maps<br/>
++ Installation notes
++ Add download to CSV
++ Add API for automatic creation of reports
++ Ability to display graphs
++ Ability to display geographic maps
