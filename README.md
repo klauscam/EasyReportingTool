@@ -1,6 +1,9 @@
 # Easy Reporting Tool
 An Easy, Fast and Lightweight web based report publishing tool based on .NET 4 and SQL Server
 
+#License
+Apache License Version 2.0
+
 #Inspiration
 Basically I needed a lightweight web application to share any required ad-hoc queries.
 I managed to find some based on PHP and MySql but I had no luck with C#/Sql Server so I decided to build one myself.
