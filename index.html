@@ -46,6 +46,26 @@ This URL can be distributed and accessed directly. On the report page one finds 
 functionality like filter, pagination and sorting.</p>
 
 <h1>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h1>
+
+<ul>
+<li>IIS 6 or 7</li>
+<li>SQL Server 2008 or later</li>
+</ul>
+
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h1>
+
+<ul>
+<li>So first, create a virtual directory in IIS and point it to the root of the project</li>
+<li>Go to your SQL Server and create a new database</li>
+<li>Grap the file named database.sql and execute it against you newly created database</li>
+<li>Go to web.config file in the root directory and modify the connection string to match yours</li>
+<li>Lastly, go to you browser and navigate to your virtual directory eg. http://localhost:8080/publisher.aspx</li>
+<li>If the web page shows, your installation was successful</li>
+</ul>
+
+<h1>
 <a id="current-limitations" class="anchor" href="#current-limitations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Limitations</h1>
 
 <p>Currently the data is being transferred as a whole to the browser, that means that if the query returns x number of rows
