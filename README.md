@@ -35,7 +35,6 @@ All data will be displayed in tabular format.
 
 
 # TODO
-+ Installation notes
 + Add download to CSV
 + Add API for automatic creation of reports
 + Ability to display graphs
