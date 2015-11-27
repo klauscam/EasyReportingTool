@@ -53,6 +53,14 @@ namespace EasyReportingTool
                             {
                                 if (columns[x].cell == "number")
                                     row = row + "\"" + columns[x].name + "\"" + ":" + reader[x] + "";
+                                else if ((columns[x].cell == "date") || (columns[x].cell == "datetime"))
+                                {
+                                    if (Convert.IsDBNull(reader[x]) == false){
+
+                                        row = row + "\"" + columns[x].name + "\"" + ":\"" + ((DateTime)reader[x]).ToString("yyyy-MM-dd") + "\"";
+                                           }
+                                    else row = row + "\"" + columns[x].name + "\"" + ":\"" + "" +"\"";
+                                }
                                 else
                                     row = row + "\"" + columns[x].name + "\"" + ":\"" + reader[x] + "\"";
 
