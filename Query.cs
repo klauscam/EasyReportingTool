@@ -45,32 +45,50 @@ namespace EasyReportingTool
                             columns.Add(new Backgrid.Column() { name = reader.GetName(x), label = reader.GetName(x), cell = Backgrid.Column.getType(reader.GetFieldType(x).Name.ToString()) });
                         }
 
-                        while (reader.Read())
+                          while (reader.Read())
                         {
 
                             string row = "{";
                             for (var x = 0; x < reader.FieldCount; x++)
                             {
                                 if (columns[x].cell == "number")
-                                    row = row + "\"" + columns[x].name + "\"" + ":" + reader[x] + "";
+                                {
+                                    if (Convert.IsDBNull(reader[x]) == false)
+                                    {
+                                        row = row + "\"" + columns[x].name + "\"" + ":" + reader[x] + "";
+                                    }
+                                    else row = row + "\"" + columns[x].name + "\"" + ":" + "null" + "";
+                                }
                                 else if ((columns[x].cell == "date") || (columns[x].cell == "datetime"))
                                 {
-                                    if (Convert.IsDBNull(reader[x]) == false){
+                                    if (Convert.IsDBNull(reader[x]) == false)
+                                    {
 
                                         row = row + "\"" + columns[x].name + "\"" + ":\"" + ((DateTime)reader[x]).ToString("yyyy-MM-dd") + "\"";
-                                           }
-                                    else row = row + "\"" + columns[x].name + "\"" + ":\"" + "" +"\"";
+                                    }
+                                    else row = row + "\"" + columns[x].name + "\"" + ":\"" + "" + "\"";
                                 }
                                 else
-                                    row = row + "\"" + columns[x].name + "\"" + ":\"" + reader[x] + "\"";
+                                {
+                                    if (Convert.IsDBNull(reader[x]) == false)
+                                    {
+                                        //row = row + "\"" + columns[x].name + "\"" + ":\"" + reader[x] + "\"";
+                                        row = row + "\"" + columns[x].name + "\"" + ":\"" + Convert.ToString(reader[x]).Replace("\"", "\\\"") + "\"";
+                                    }
+                                    else
+                                    {
+                                        row = row + "\"" + columns[x].name + "\"" + ":\"" + (reader[x]) + "\"";
 
-                                if (x!= reader.FieldCount - 1)
-                                
-                                    row = row +  ",";
+                                    }
+                                }
+                                if (x != reader.FieldCount - 1)
+
+                                    row = row + ",";
                             }
                             row = row + "}";
                             result.Add(row);
                         }
+
                     }
                     reader.Close();
                 }
