@@ -39,3 +39,6 @@ All data will be displayed in tabular format.
 + Add API for automatic creation of reports
 + Ability to display graphs
 + Ability to display geographic maps
+
+Buy me a beer using Bitcoin
+## [163anEKNWhuRuv1srtPcvzEw7iLPQnz1qr](bitcoin:163anEKNWhuRuv1srtPcvzEw7iLPQnz1qr)
